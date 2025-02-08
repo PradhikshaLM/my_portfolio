@@ -1,0 +1,425 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:#DDD6F3;
+}
+
+nav .btn {
+    padding: 0.6rem 1.2rem;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90%);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav .btn:hover {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(213,105,167,1) 0%, rgba(117,86,204,1) 90%);
+}
+
+/* Home Section */
+.hero {
+    margin-top: 80px; /* Adjust for the fixed header */
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    
+
+    color: #0f0f0f;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #30368a;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero a {
+    padding: 0.8rem 2rem;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90%);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(213,105,167,1) 0%, rgba(117,86,204,1) 90%);
+    color: #ffffff;
+}
+
+/* About Section */
+#about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#about img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Skills Section */
+#skills {
+    padding: 4rem 2rem;
+    background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+
+    color: #fff;
+    text-align: center;
+}
+
+#skills h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+.skills-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #30368a calc(var(--skill-percent) * 1%), 
+        #ddd calc(var(--skill-percent) * 1%)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #222831;
+}
+
+.skill .skill-title {
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+.skill .skill-percent {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ec61ae8a;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Projects Section */
+#projects {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+}
+
+.project-item h3 {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.project-item p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+.project-item button{
+    padding: 0.8rem 2rem;
+    margin-bottom: 20px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90%);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-item button:hover {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(213,105,167,1) 0%, rgba(117,86,204,1) 90%);
+    color: #ffffff;
+}
+.project-category {
+    margin: 2rem 0;
+}
+
+.project-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #30368a;
+}
+.btn{
+    padding: 0.8rem 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90%);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: green;
+    color: #ffffff;
+}
+.project-gallery {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    flex: 1 1 calc(50% - 1rem);
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.project-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+#contact {
+    padding: 4rem 2rem;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    
+
+    color: #0f0f0f;
+    text-align: center;
+}
+#contact h1{
+    margin-bottom: 20px;
+}
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button{
+    padding: 0.8rem 2rem;
+    margin-bottom: 20px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90%);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(213,105,167,1) 0%, rgba(117,86,204,1) 90%);
+    color: #ffffff;
+}
+
+/* Social Menu */
+
+.social-menu {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-menu ul li {
+    display: inline-block;
+}
+
+.social-menu ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #222831;
+    padding: 0.8rem 1.2rem;
+    
+    background: #fcfafa;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+    background: #DDD6F3;
+    color: #141414;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-menu ul li a i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+    color: #080808;
+    transition: transform 0.3s ease;
+}
+
+.social-menu ul li a:hover i {
+    transform: rotate(360deg);
+}
+
+
